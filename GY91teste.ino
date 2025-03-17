@@ -63,7 +63,7 @@ void sep(int a) {
 // Função para ler a temperatura
 void readTemperature() {
   int16_t rawTemp = i2cRead(MPU, TEMP_H); // Lê os dados de temperatura
-  tempC = (rawTemp / 340.0) + 36.53; // Converte para Celsius
+  tempC = (rawTemp / 340.0) + 16; // Converte para Celsius
   Serial.printf("Temperatura: %.2f °C\n", tempC); // Imprime a temperatura
 }
 
