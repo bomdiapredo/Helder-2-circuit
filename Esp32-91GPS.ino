@@ -2,8 +2,8 @@
 // SDA ---> 21
 // SCL ---> 22
 // GPS
-// RX ----> 34
-// TX ----> 12
+// RX ----> 12
+// TX ----> 34
 
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
