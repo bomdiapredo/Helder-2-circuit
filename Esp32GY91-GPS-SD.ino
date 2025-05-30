@@ -374,10 +374,12 @@ void loop() {
             dataFile.printf("Date: %02d/%02d/%04d, Time: %02d:%02d:%02d, ", 
                 gps.date.day(), gps.date.month(), gps.date.year(),
                 gps.time.hour(), gps.time.minute(), gps.time.second());
+            dataFile.printf("Latitude: %.6f, Longitude: %.6f, Satellites: %d, Speed: %.2f km/h, Altitude GPS: %.2f m, ", 
+                gps.location.lat(), gps.location.lng(), gps.satellites.value(), gps.speed.kmph(), gps.altitude.meters());
             dataFile.printf("AccX: %.3f, AccY: %.3f, AccZ: %.3f, ", accX, accY, accZ);
             dataFile.printf("GyroX: %.3f, GyroY: %.3f, GyroZ: %.3f, ", gyroX, gyroY, gyroZ);
-            dataFile.printf("Temp: %.2f, Pressure: %.2f, Altitude: %.2f\n", 
-                tempC, pressure, altitude);
+            dataFile.printf("MPU Temp: %.2f C, BMP280 Temp: %.2f C, Pressure: %.2f hPa, Altitude BMP280: %.2f m\n", 
+                tempC, bmpTemp, pressure, altitude);
         } else {
             dataFile.println("GPS data not valid.");
         }
