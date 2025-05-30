@@ -1,3 +1,10 @@
+// GY-91
+// SDA ---> 21
+// SCL ---> 22
+// GPS
+// RX ----> 12
+// TX ----> 34
+
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BMP280.h>
